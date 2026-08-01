@@ -3,192 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Games Tren - Roblox Indonesia</title>
+<title>Sejarah - Roblox Indonesia</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#fff;
-}
+<link rel="stylesheet" href="/style/halaman-utama.css">
 
-/* HEADER */
-.header{
-    position:fixed;
-    width:100%;
-    height:20px;
-    background:#e9e9e9;    
-}
-
-.header1{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;    
-    padding:1px 10px;
-    background:#e9e9e9;
-}
-
-.menu-btn{
-    font-size:25px;
-    cursor:pointer;
-    border:none;
-    background:none;
-}
-
-.right-icons{
-    display:flex;
-    gap:15px;
-    align-items:center;
-}
-
-.profile{
-    width:30px;
-    height:30px;
-    background: #aaaaaa;
-    border-radius:50%;
-    object-fit:cover;
-}
-
-.search{
-    font-size:20px;
-    background:#dcdcdc;
-    padding:2px 10px;
-    border-radius:5px;
-}
-
-/* NAV */
-.nav{  
-    display:flex;
-    justify-content:space-around;
-    background:#e9e9e9;
-    padding-bottom:1px;
-    font-size:15px;
-}
-
-.nav a{
-    text-decoration:none;
-    color:black;
-    padding:5px 5px;
-}
-
-.active{
-    border-bottom:2px solid black;
-    font-weight:bold;
-}
-
-/* CONTENT */
-.content{  
-    position:fixed;
-    min-height:10px;
-}
-
-/* FOOTER */
-.footer-links{
-    display:flex;
-    justify-content:space-around;
-    padding:10px 10px;
-    font-size:15px;
-}
-
-.footer-links a{
-    text-decoration:none;
-    color:#333;
-}
-
-hr{
-    margin:0 5px;
-    border:0;
-    border-top:1px solid #ccc;
-}
-
-.copyright{
-    text-align:center;
-    padding:10px 0;
-    color:#555;
-}
-
-/* DROPDOWN MENU */
-.sidebar {
-    position:fixed;
-    height:100%;
-    width:0;
-    top:0;
-    left:0;
-    background:white;
-    overflow-x:hidden;
-    transition:0.3s;
-    box-shadow:2px 0 10px rgba(0,0,0,0.2);
-    padding-top:60px;
-}
-
-.sidebar a{
-    display:block;
-    padding:15px 25px;
-    text-decoration:none;
-    color:black;
-    font-size:20px;
-}
-
-.sidebar a:hover{
-    background:#f1f1f1;
-}
-
-.close-btn1{
-    position:absolute;
-    justify-content:space-between;
-    width:250px;
-    top:10px;
-    right:20px
-    display:flex;
-    padding:5px ;
-    background:#aaaaaa;        
-}
-
-.close-btn{
-    position:absolute;
-    right:30px;
-    font-size:35px;
-    cursor:pointer;
-}
-</style>
 </head>
 <body>
 
-<!-- header -->
 <div class="header">
 <div class="header1">
     <button class="menu-btn" onclick="openMenu()">☰</button>
-  
-    <img src="https://robloxindonesia.github.io/img/logo.png" width="100">
+    
+     <div id="logo1"></div>
 
-    <div class="right-icons">
-        <!-- Foto profile -->
-        <a href="/profil"><img src="https://RobloxIndonesia.github.io/img//30DAY-AvatarHeadshot-ED6E504DCD0989309333C3F87B84DC2E.png" class="profile" alt="Profile"></a>
-        <div class="search">⌕</div>
+     <div class="right-icons">
+         <div id="profiles"></div>
+         <div class="search">⌕</div>
      </div>
 </div>     
      
 <!-- Nav -->
 <div class="nav">
-    <a href="/home">Home</a>
-    <a href="/games-tren">Game Tren</a>
-    <a href="/berita">Berita</a>
-    <a href="/sejarah" class="active">Sejarah</a>
+    <a id="link1"></a>
+    <a id="link2"></a>
+    <a id="link3"></a>
+    <a id="link4" class="active"></a>
 </div>
 </div>
 
-<!-- sidebar -->
 <div id="menuDropdown" class="sidebar">
     <div class="close-btn1">
-    <img src="https://robloxindonesia.github.io/img/logo.png" width="100">
+    <div id="logo2"></div>
     <span class="close-btn" onclick="closeMenu()">×</span>
     </div>
-    <a href="/robloxshorts">Roblox Shorts</a>
-    <a href="#">keadaan koneksi server roblox</a>
-    <a href="#">kode² di game roblox</a>
-    <a href="#">tutorial di roblox</a>
-    <a href="#">karakter terkenal di roblox</a>
-    <a href="#">hubungi kami</a>
+    <a id="link9"></a>
+    <a id="link10"></a>
+    <a id="link11"></a>
+    <a id="link12"></a>
+    <a id="link13"></a>
+    <a id="link14"></a>
+    <a id="link15"></a>
+    <a id="link16"></a>
 </div>
 
 <br>
@@ -200,18 +55,18 @@ hr{
 <div class="content"></div>
     
 <div class="footer-links">
-    <a href="#">Tentang Kami</a>
-    <a href="#">Bantuan</a>
-    <a href="#">Privasi</a>
-    <a href="#">Situs Peta</a>
+    <a id="link5"></a>
+    <a id="link6"></a>
+    <a id="link7"></a>
+    <a id="link8"></a>
 </div>
 
 <hr>
 
-<div class="copyright">
-    ©2026 CYT Roblox Indonesia.
-</div>
+<div id="text1" class="copyright"></div>
+<div id="text2" class="copyright"></div>
 
+<script src="/script/halaman-utama.js"></script>
 <script>
 function openMenu(){
     document.getElementById("menuDropdown").style.width = "250px";
